@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(222, 221, 221, 0.701);
+}
+
+.main-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    /* 100 % da largura */
+    height: 80dvh;
+    /* 80% da altura */
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 400px;
+    height: 500px;
+    background-color: rgba(222, 221, 221, 0.701);
+    border-radius: 10px;
+    border: 1px solid rgb(68, 78, 84);
+    box-shadow: 0 1px 11px rgb(25, 55, 102);
+    display: flex;
+    flex-direction: column;
+
+    & img {
+        width: 100%;
+        height: 200px;
+        border-radius: 5px;
+        z-index: 3;
+
+    }
+
+    & img::after {
+            /* camada para escurecer a img do cruzeiro */
+    content: "";
+    /* cria o elemento */
+    position: absolute;
+    /* permite colocar ele livremente no boas-vindas */
+    inset: 0;
+    /* é igual top:0 left:0 etc. faz ele ocupar o espaço todo */
+    background: rgba(0, 0, 0, 0.4);
+    /* deixa a cor preta com 40% de transparência */
+    z-index: 2;
+    }
+
+    & h1 {
+        padding: 30px;
+        text-align: justify;
+        font-family: "Snowburst One", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    & h2 {
+        all: unset;
+        margin-top: auto;
+        background-color: rgb(161, 161, 161);
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-inline: 30px;
+        margin-bottom: 30px;
+        padding: 5px;
+        font-family: "Grape Nuts", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+
+    }
+
+}
+
+.preco{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.img-circle {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+}
+
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.preco{
+    display: flex;
+    padding-right: 35px;
+    align-items: center;
+
+    & span{
+        font-size: 15px;
+    }
+
+    & p{
+        font-family: "Snowburst One", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 13px;
+    }
+}
